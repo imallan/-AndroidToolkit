@@ -1,0 +1,39 @@
+{
+  "name": "ec",
+  "version": "1.0.0",
+  "description": "examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "ENVIRONMENT=DEV electron .",
+    "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack-dev-server --hot --inline",
+    "osx-package": "./node_modules/.bin/webpack -p && ./node_modules/electron-packager/cli.js ./ AndroidToolkit --out ./bin --platform=darwin --arch=x64 --overwrite --ignore=\"ignore|bin|node_modules\" --icon ./assets/appicon.icns"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "electron-packager": "^8.4.0",
+    "electron-prebuilt": "^1.4.13",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "material-ui": "^0.16.5",
+    "react-dropzone": "^3.8.0",
+    "react-redux": "^5.0.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "streamjs": "^1.6.4"
+  }
+}

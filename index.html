@@ -1,0 +1,22 @@
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+
+    <div id="content">
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+      var bundlePath = './build/bundle.js'
+
+      if (typeof process !== 'undefined' && process.env.ENVIRONMENT === 'DEV') {
+        bundlePath = "http://localhost:8080/build/bundle.js"
+      }
+
+      var bundleScriptEl = document.createElement('script')
+      bundleScriptEl.src = bundlePath
+      document.currentScript.parentNode.insertBefore(bundleScriptEl, document.currentScript)
+    </script>
+
+  </body>
